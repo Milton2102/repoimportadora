@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Página principal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <script>
+        function procesar() {
+            // Lo primero que voy a hacer es colocar una bandera (flag)
+            // indicando donde estoy.
+            console.log("-- funcion procesar --");
+            limpiar_errores();
+            // recuperar los datos del formulario.
+            const formulario = document.getElementById("form_chileno");
+            const datos_formulario = new FormData(formulario);
+            var nombre = datos_formulario.get("campo_nombre");
+            var apellido = datos_formulario.get("campo_apellido");
+            var run = datos_formulario.get("campo_run");
+            var correo = datos_formulario.get("campo_correo");
+            var contraseña = datos_formulario.get("campo_contraseña");
+
+            // los imprimo en la consola, solo para poder verlos.
+            console.log("nombre:" + nombre);
+            console.log("apellido:" + apellido);    
+            console.log("run:" + run);
+            console.log("correo:" + correo);
+            console.log("contraseña:" + contraseña);
+
+            if (!validar_nombre(nombre)) {
+                let caja_error = document.getElementById("mensaje_campo_nombre");
+                caja_error.innerHTML = "El nombre ingresado no es válido";
+            }
+            if (!validar_apellido(apellido)) {
+                let caja_error = document.getElementById("mensaje_campo_apellido");
+                caja_error.innerHTML = "El apellido ingresado no es válido";
+            }
+            if (!validar_run(run)) {
+                let caja_error = document.getElementById("mensaje_campo_run");
+                caja_error.innerHTML = "El run ingresado no es válido";
+            }
+            if (!validar_correo(correo)) {
+                let caja_error = document.getElementById("mensaje_campo_correo");
+                caja_error.innerHTML = "El correo ingresado no es válido";
+            }
+            if (!validar_contraseña(contraseña)) {
+                let caja_error = document.getElementById("mensaje_campo_contraseña");
+                caja_error.innerHTML = "La contraseña ingresada no es válida";
+            }
+        }
+
+        
+
+        function limpiar_errores() {
+            const cajas_errores = document.getElementsByClassName("error");
+            for (const element of cajas_errores) {
+                element.innerHTML = "";
+            }
+        }
+
+        function validar_run(rutCompleto) {
+            // 1. Limpiar el RUT de puntos y espacios
+            rutCompleto = rutCompleto.replace(/^0+|[\s.]+/g, '');
+
+            // 2. Verificar que tenga el formato básico con expresión regular
+            if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto)) return false;
+
+            // 3. Separar el número del dígito verificador
+            const tmp = rutCompleto.split('-');
+            let digv = tmp[1];
+            const rut = tmp[0];
+
+            // Pasar a minúscula si el dígito verificador es 'K'
+            if (digv == 'K') digv = 'k';
+
+            // 4. Calcular el dígito verificador esperado
+            return calcular_dv(rut) == digv;
+        }
+
+        function calcular_dv(T) {
+            let suma = 0;
+            let multiplicador = 2;
+
+            // Recorrer los números de derecha a izquierda
+            for (let i = 1; i <= T.length; i++) {
+                suma += parseInt(T.charAt(T.length - i)) * multiplicador;
+                multiplicador = multiplicador < 7 ? multiplicador + 1 : 2;
+            }
+
+            const resto = suma % 11;
+            const dvCalculado = 11 - resto;
+
+            if (dvCalculado == 11) return '0';
+            if (dvCalculado == 10) return 'k';
+            return dvCalculado.toString();
+        }
+
+
+        
+        function validar_nombre(nombre_ingresado) {
+            var valido = isNaN(nombre_ingresado);
+            valido = valido && (nombre_ingresado.length > 0 && nombre_ingresado.length < 50);
+            return valido;
+        }
+
+        function validar_apellido(apellido_ingresado) {
+            var valido = isNaN(apellido_ingresado);
+            valido = valido && (apellido_ingresado.length > 0 && apellido_ingresado.length < 100);
+            return valido;
+        }
+
+        function validar_correo(correo_ingresado) {
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(correo_ingresado);
+        }
+
+
+        function validar_contraseña(contraseña_ingresada) {
+            
+            return contraseña_ingresada.length >= 4 && contraseña_ingresada.length <= 10;
+        }
+        
+
+    </script>
+</head>
+<body>
+    <h1>Registro de Usuarios</h1>
+
+    <div id="contenedor_formulario" class="container">
+        <form id="form">
+            <fieldset> <!-- me marca una cajita alrededor de los campos del formulario -->
+                <legend>Formulario</legend>
+
+                <label for="campo_run">RUN:</label>
+                <input type="text" name="campo_run" id="campo_run" placeholder="12345678-9">
+                <span class="error" id="mensaje_campo_run"></span><br>
+
+                <label for="campo_nombre">Nombre:</label>
+                <input type="text" name="campo_nombre" id="campo_nombre" placeholder="Juan">
+                <span class="error" id="mensaje_campo_nombre"></span><br>
+
+                <label for="campo_apellido">Apellido:</label>
+                <input type="text" name="campo_apellido" id="campo_apellido" placeholder="Lopez Pérez">
+                <span class="error" id="mensaje_campo_apellido"></span><br>
+
+                <label for="campo_correo">Correo:</label>
+                <input type="text" name="campo_correo" id="campo_correo" placeholder="correo@ejemplo.com">
+                <span class="error" id="mensaje_campo_correo"></span><br>
+
+                <label for="campo_contraseña">Contraseña:</label>
+                <input type="password" name="campo_contraseña" id="campo_contraseña" placeholder="********">
+                <span class="error" id="mensaje_campo_contraseña"></span><br>
+
+                <button type="reset">Limpiar</button>
+                <button type="button" onclick="procesar()">Procesar</button>
+            </fieldset>
+        </form>
+    </div>
+    <nav>
+        <ul> 
+           
+            <li>
+
+                <a href="principal.html">Principal</a>
+            </li>
+            <li>
+                <a href="productos.html">Productos</a>
+            </li>
+            <li>
+                <a href="registroUsuarios.html">Registro de Usuarios</a>
+            </li>
+            <li>
+                <a href="iniciarSesion.html">Iniciar Sesión</a>
+            </li>
+            <li>
+                <a href="nosotros.html">Nosotros</a>
+            </li>
+            <li>
+                <a href="blogs.html">Blogs</a>
+            </li>
+            <li>
+                <a href="contacto.html">Contacto</a>
+            </li>
+
+        </ul>
+    </nav>
+    <article>
+        
+    </article>
+</body>
+
+</html>
