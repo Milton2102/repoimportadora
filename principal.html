@@ -1,54 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
-    <title>Página principal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Importadora Larrain | Inicio</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <script>
-    </script>
 </head>
-
 <body>
-    <p>Esta página web es una página HTML válida.</p>
-    <nav>
-        <ul>
-            
-            <li>
-                
-                <a href="principal.html">Principal</a>
-            </li>
-            <li>
-                
-                <a href="productos.html">Productos</a>
-            </li>
-            <li>
-
-                <a href="registroUsuarios.html">Registro de Usuarios</a>
-            </li>
-            <li>
- 
-                <a href="iniciarSesion.html">Iniciar Sesión</a>
-            </li>
-            <li>
-
-                <a href="nosotros.html">Nosotros</a>
-            </li>
-            <li>
-
-                <a href="blogs.html">Blogs</a>
-            </li>
-            <li>
-
-                <a href="contacto.html">Contacto</a>
-            </li>
-        </ul>
-    </nav>
+    <header>
+        <div class="marca">Importadora Larraín</div>
+        <nav aria-label="Navegación principal"><ul>
+            <li><a class="activo" href="principal.html">Inicio</a></li><li><a href="productos.html">Productos</a></li><li><a href="registroUsuarios.html">Registro</a></li><li><a href="iniciarSesion.html">Iniciar sesión</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a href="contacto.html">Contacto</a></li>
+        </ul></nav>
+    </header>
     <main>
-        <h1>IMPORTADORA LARRAIN</h1>
-        <h3>¡Bienvenido a nuestra tienda en línea!</h3>
+        <section class="hero" aria-labelledby="titulo-principal">
+            <div>
+                <h1 id="titulo-principal">Tecnología para disfrutar cada día</h1>
+                <p>Encuentra productos electrónicos seleccionados para estudiar, trabajar y entretenerte. Compra de forma simple en Importadora Larraín.</p>
+                <a class="boton" href="productos.html">Ver productos</a>
+            </div>
+            <img src="imagenes/televisor.webp" alt="Televisor inteligente disponible en la tienda">
+        </section>
+        <section class="seccion" aria-labelledby="destacados">
+            <h2 id="destacados">Productos destacados</h2>
+            <div class="tarjetas">
+                <article class="tarjeta-producto"><img src="imagenes/audifono.webp" alt="Audífonos inalámbricos"><div class="tarjeta-contenido"><h3>Audífonos Bluetooth</h3><p>Audio inalámbrico para acompañarte donde estés.</p><a class="enlace" href="productos.html">Conocer producto</a></div></article>
+                <article class="tarjeta-producto"><img src="imagenes/producto6.webp" alt="Proyectador"><div class="tarjeta-contenido"><h3>Proyectador</h3><p>un proyector que proyecta.</p><a class="enlace" href="productos.html">Conocer producto</a></div></article>
+                <article class="tarjeta-producto"><img src="imagenes/producto7.webp" alt="al que proyectan"><div class="tarjeta-contenido"><h3>al que proyectan<h3><p>Un proyectador para el proyector.</p><a class="enlace" href="productos.html">Conocer producto</a></div></article>
+            </div>
+        </section>
+        <section class="seccion beneficios" aria-label="Beneficios de la tienda">
+            <article class="beneficio"><h3>Compra informada</h3><p>Revisa productos y sus características antes de registrarte.</p></article>
+            <article class="beneficio"><h3>Atención cercana</h3><p>Usa nuestro formulario de contacto para resolver dudas.</p></article>
+            <article class="beneficio"><h3>Contenido útil</h3><p>Visita el blog para conocer consejos sobre tecnología.</p></article>
+        </section>
+        <section class="seccion" aria-labelledby="video-titulo"><h2 id="video-titulo">Conoce nuestra tienda</h2><p>Revisa nuestro video de presentación en YouTube.</p><a class="boton" href="https://www.youtube.com/watch?v=oQZDyNK7cic" target="_blank">Ver video</a></section>
     </main>
+    <footer><p>Importadora Larraín · Tienda online de electrónicos</p><p>Proyecto académico Desarrollo Fullstack II</p></footer>
 </body>
-
 </html>

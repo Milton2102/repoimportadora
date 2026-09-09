@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Importadora Larrain | Contacto</title><link rel="stylesheet" href="css/estilos.css"><script src="js/contacto.js" defer></script></head>
+<body>
+    <header><div class="marca">Importadora Larraín</div><nav aria-label="Navegación principal"><ul><li><a href="principal.html">Inicio</a></li><li><a href="productos.html">Productos</a></li><li><a href="registroUsuarios.html">Registro</a></li><li><a href="iniciarSesion.html">Iniciar sesión</a></li><li><a href="nosotros.html">Nosotros</a></li><li><a href="blogs.html">Blogs</a></li><li><a class="activo" href="contacto.html">Contacto</a></li></ul></nav></header>
+    <main>
+        <section aria-labelledby="titulo-contacto"><h1 id="titulo-contacto">Contáctanos</h1><p>Completa el formulario y te responderemos a través del correo indicado.</p></section>
+        <section class="panel-formulario"><form id="formulario_contacto" novalidate>
+            <label for="nombre_contacto">Nombre</label><input id="nombre_contacto" name="nombre" type="text" maxlength="100" required><p class="error" id="error_nombre"></p>
+            <label for="correo_contacto">Correo electrónico</label><input id="correo_contacto" name="correo" type="email" maxlength="100" required><p class="error" id="error_correo"></p>
+            <label for="comentario_contacto">Comentario</label><textarea id="comentario_contacto" name="comentario" maxlength="500" required></textarea><p class="error" id="error_comentario"></p>
+            <button class="boton" type="submit">Enviar consulta</button><p id="mensaje_contacto" class="mensaje-exito oculto"></p>
+        </form></section>
+        <section class="datos-contacto" aria-label="Datos de contacto"><article class="dato"><h3>Horario</h3><p>Lunes a viernes, 09:00 a 18:00 horas.</p></article><article class="dato"><h3>Correo</h3><p>contacto@importadoralarrain.cl</p></article><article class="dato"><h3>Ubicación</h3><p>Maipú, Región Metropolitana.</p></article></section>
+    </main>
+    <footer><p>Importadora Larraín · Tienda online de electrónicos</p></footer>
+</body>
+</html>
