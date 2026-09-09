@@ -44,9 +44,24 @@
 
         </ul>
     </nav>
-    <article>
-        <h1>Iniciar Sesión</h1>
-    </article>
+    <main>
+        <article class="panel-formulario">
+            <h1>Iniciar Sesión</h1>
+            <form id="form_inicio_sesion">
+                <fieldset>
+                    <legend>Ingresa tus datos</legend>
+
+                    <label for="campo_correo_sesion">Correo:</label>
+                    <input type="email" name="campo_correo_sesion" id="campo_correo_sesion" placeholder="correo@ejemplo.com" required>
+
+                    <label for="campo_contrasena_sesion">Contraseña:</label>
+                    <input type="password" name="campo_contrasena_sesion" id="campo_contrasena_sesion" placeholder="********" required>
+
+                    <button class="boton" type="submit">Iniciar Sesión</button>
+                </fieldset>
+            </form>
+        </article>
+    </main>
 </body>
 
 </html>
