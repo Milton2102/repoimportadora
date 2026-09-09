@@ -20,7 +20,7 @@ nav a:hover{
     color:red;
 }
 
-#producto1 {
+.imagen-producto {
   width: 400px;
   height: 250px;
 
@@ -33,7 +33,7 @@ nav a:hover{
   margin-bottom: 30px;
 }
 
-#form {
+#form_chileno {
   display: flex;
   flex-direction: column; 
   align-items: center; 
