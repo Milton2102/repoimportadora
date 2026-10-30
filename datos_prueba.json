@@ -1,0 +1,124 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "category": "Televisores y Video",
+      "price": "$1.000",
+      "precioNumerico": 1000,
+      "stocked": true,
+      "oferta": true,
+      "destacado": true,
+      "name": "Televisor mundial",
+      "image": "/imagenes/televisor.webp",
+      "description": "Televisor inteligente disponible en la tienda con pantalla de alta definición y acceso directo a aplicaciones de streaming."
+    },
+    {
+      "id": "2",
+      "category": "Audio",
+      "price": "GRATIS",
+      "precioNumerico": 0,
+      "stocked": true,
+      "oferta": true,
+      "destacado": true,
+      "name": "Audífonos inalámbricos",
+      "image": "/imagenes/audifono.webp",
+      "description": "Audio inalámbrico Bluetooth de gran autonomía para acompañarte donde estés con total comodidad."
+    },
+    {
+      "id": "3",
+      "category": "Audio",
+      "price": "$150.000",
+      "precioNumerico": 150000,
+      "stocked": true,
+      "oferta": false,
+      "destacado": false,
+      "name": "Parlante portátil",
+      "image": "/imagenes/producto3.webp",
+      "description": "Parlante Bluetooth resistente y potente para eventos, estudio o actividades al aire libre."
+    },
+    {
+      "id": "4",
+      "category": "Televisores y Video",
+      "price": "$5.000",
+      "precioNumerico": 5000,
+      "stocked": true,
+      "oferta": true,
+      "destacado": false,
+      "name": "Roku TV",
+      "image": "/imagenes/producto4.webp",
+      "description": "Convierte cualquier pantalla en un centro de entretenimiento inteligente con control remoto incluido."
+    },
+    {
+      "id": "5",
+      "category": "Televisores y Video",
+      "price": "$2.000.000",
+      "precioNumerico": 2000000,
+      "stocked": false,
+      "oferta": false,
+      "destacado": false,
+      "name": "Televisor comun y corriente",
+      "image": "/imagenes/producto5.webp",
+      "description": "Televisor clásico de alta durabilidad ideal para espacios familiares y oficinas."
+    },
+    {
+      "id": "6",
+      "category": "Proyección",
+      "price": "$250",
+      "precioNumerico": 250,
+      "stocked": true,
+      "oferta": true,
+      "destacado": true,
+      "name": "Proyectador",
+      "image": "/imagenes/producto6.webp",
+      "description": "Un proyector compacto que proyecta imágenes nítidas en alta resolución para cine en casa o presentaciones."
+    },
+    {
+      "id": "7",
+      "category": "Proyección",
+      "price": "$350",
+      "precioNumerico": 350,
+      "stocked": true,
+      "oferta": false,
+      "destacado": true,
+      "name": "Telón de Proyección (al que proyectan)",
+      "image": "/imagenes/producto7.webp",
+      "description": "Un telón proyectador para el proyector con superficie blanca antirreflejo y soporte retráctil."
+    },
+    {
+      "id": "8",
+      "category": "Telefonía y Móviles",
+      "price": "$150",
+      "precioNumerico": 150,
+      "stocked": true,
+      "oferta": true,
+      "destacado": false,
+      "name": "Smartphone Aifon",
+      "image": "/imagenes/producto8.webp",
+      "description": "Teléfono inteligente importado con cámara de alta resolución y batería de larga duración."
+    },
+    {
+      "id": "9",
+      "category": "Audio",
+      "price": "$300",
+      "precioNumerico": 300,
+      "stocked": true,
+      "oferta": false,
+      "destacado": false,
+      "name": "Reproductor Música 9",
+      "image": "/imagenes/producto9.webp",
+      "description": "Sistema de audio compacto con ecualizador digital y conectividad multipunto."
+    },
+    {
+      "id": "10",
+      "category": "Audio",
+      "price": "$400",
+      "precioNumerico": 400,
+      "stocked": true,
+      "oferta": false,
+      "destacado": false,
+      "name": "Reproductor de música diminuto",
+      "image": "/imagenes/producto10.webp",
+      "description": "Reproductor MP3/Bluetooth ultracompacto con clip deportivo y memoria integrada."
+    }
+  ]
+}

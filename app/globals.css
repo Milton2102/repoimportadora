@@ -1,0 +1,135 @@
+:root {
+  --azul: #12355b;
+  --naranjo: #e87916;
+  --fondo: #f4f7fb;
+  --texto: #182230;
+  --borde: #d0d5dd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────── */
+.header-institucional {
+  background-color: var(--azul);
+  color: white;
+}
+
+.nav-institucional {
+  background-color: #0b2947;
+}
+
+.nav-institucional .nav-link:hover,
+.nav-institucional .nav-link.activo {
+  background-color: #24527e;
+  border-radius: 6px;
+}
+
+/* ── Colores reutilizables ───────────────── */
+.text-azul  { color: var(--azul)   !important; }
+.text-naranjo { color: var(--naranjo) !important; }
+
+/* ── Hero ────────────────────────────────── */
+.hero {
+  background: linear-gradient(115deg, #12355b, #286aa0);
+  border-radius: 14px;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 290px;
+  object-fit: contain;
+  background: white;
+  border-radius: 10px;
+}
+
+/* ── Botón naranja ───────────────────────── */
+.boton {
+  display: inline-block;
+  border: 0;
+  border-radius: 6px;
+  background-color: var(--naranjo);
+  color: white !important;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover:not(:disabled) {
+  background-color: #b95300;
+  color: white !important;
+}
+
+.boton:disabled {
+  background-color: #98a2b3;
+  cursor: not-allowed;
+}
+
+/* ── Tarjeta de producto ─────────────────── */
+.tarjeta-producto {
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px #10182814;
+  transition: transform 0.15s ease;
+}
+
+.tarjeta-producto:hover {
+  transform: translateY(-2px);
+}
+
+.imagen-producto {
+  width: 100%;
+  height: 190px;
+  object-fit: contain;
+  background: white;
+}
+
+/* ── Beneficios / datos de contacto ──────── */
+.beneficio,
+.dato {
+  background-color: #e8f3ff;
+  border-radius: 8px;
+}
+
+/* ── Formulario ──────────────────────────── */
+.panel-formulario {
+  max-width: 720px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.error {
+  min-height: 18px;
+  margin: 2px 0;
+  color: #b42318;
+  font-size: 0.87rem;
+}
+
+.mensaje-exito {
+  padding: 12px;
+  border-radius: 6px;
+  background: #dcfae6;
+  color: #087443;
+}
+
+/* ── Footer ──────────────────────────────── */
+.footer-institucional {
+  background-color: #102a43;
+  color: white;
+}
