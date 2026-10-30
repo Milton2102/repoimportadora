@@ -18,7 +18,7 @@ export const productos: Producto[] = [
     nombre: 'Televisor LED 55" Samsung 4K',
     categoria: "Televisores",
     descripcion:
-      "Smart TV QLED 55 pulgadas con resolución 4K UHD, HDR10+ y acceso directo a todas las apps de streaming.",
+      "Smart TV QLED 43 pulgadas con resolución 4K UHD, HDR10+ y acceso directo a todas las apps de streaming.",
     precio: "$389.990",
     precioNumerico: 389990,
     imagen: "/imagenes/televisor.webp",
@@ -57,10 +57,10 @@ export const productos: Producto[] = [
   },
   {
     id: "4",
-    nombre: "Smartphone Huawei Nova 11",
-    categoria: "Telefonía",
+    nombre: "roku 11",
+    categoria: "Television",
     descripcion:
-      'Teléfono inteligente con pantalla OLED 6.7", cámara triple de 50 MP y batería de 4500 mAh de carga rápida.',
+      'roku de Television con todos los canales',
     precio: "$259.990",
     precioNumerico: 259990,
     imagen: "/imagenes/producto4.webp",
@@ -71,10 +71,10 @@ export const productos: Producto[] = [
   },
   {
     id: "5",
-    nombre: 'Notebook Asus VivoBook 15"',
+    nombre: 'Televisor 32 pulgadas"',
     categoria: "Computación",
     descripcion:
-      "Notebook ultradelgado Intel Core i5, 16 GB RAM, SSD 512 GB, pantalla Full HD 15.6 y batería de todo el día.",
+      "Smart TV QLED 32 pulgadas con resolución 4K UHD, HDR10+ y acceso directo a todas las apps de streaming.",
     precio: "$449.990",
     precioNumerico: 449990,
     imagen: "/imagenes/producto5.webp",
@@ -113,12 +113,12 @@ export const productos: Producto[] = [
   },
   {
     id: "8",
-    nombre: "Smartwatch Xiaomi Band 8 Pro",
-    categoria: "Wearables",
+    nombre: "iphone",
+    categoria: "telefonos",
     descripcion:
-      "Reloj inteligente con pantalla AMOLED, monitoreo cardíaco 24/7, GPS integrado y batería de hasta 14 días.",
-    precio: "$39.990",
-    precioNumerico: 39990,
+      "iphone 60 hz",
+    precio: "$499.000",
+    precioNumerico: 499000,
     imagen: "/imagenes/producto8.webp",
     stock: 20,
     enStock: true,
@@ -127,10 +127,10 @@ export const productos: Producto[] = [
   },
   {
     id: "9",
-    nombre: "Mouse Logitech MX Master 3S",
-    categoria: "Periféricos",
+    nombre: "parlante",
+    categoria: "parlantes",
     descripcion:
-      "Mouse inalámbrico ergonómico de alto rendimiento, sensor de 8000 DPI, recarga USB-C y compatible con múltiples SO.",
+      "Parlante de alta definicion",
     precio: "$49.990",
     precioNumerico: 49990,
     imagen: "/imagenes/producto9.webp",
@@ -141,10 +141,10 @@ export const productos: Producto[] = [
   },
   {
     id: "10",
-    nombre: "Monitor LG UltraWide 27\" 4K",
-    categoria: "Monitores",
+    nombre: "audifonos bose",
+    categoria: "auriculares",
     descripcion:
-      "Monitor IPS 27 pulgadas 4K UHD con panel NanoIPS, 1 ms GtG, HDR600 y puertos USB-C / DisplayPort / HDMI.",
+      "audifonos bose, sonido envolvente",
     precio: "$329.990",
     precioNumerico: 329990,
     imagen: "/imagenes/producto10.webp",
