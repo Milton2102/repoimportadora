@@ -1,4 +1,4 @@
-export default function LinkMock({ href, children, className, onClick }) {
+export default function LinkMock({ href, children, className, onClick, ...props }) {
   return (
     <a
       href={href}
@@ -7,6 +7,7 @@ export default function LinkMock({ href, children, className, onClick }) {
         e.preventDefault();
         if (onClick) onClick(e);
       }}
+      {...props}
     >
       {children}
     </a>
